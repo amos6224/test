@@ -9,7 +9,6 @@
 FROM amos6224/namely.3
 
 # Install Nginx.
-RUN add-apt-repository -y ppa:nginx/stable
 RUN apt-get update -qq && \
     DEBIAN_FRONTEND=noninteractive apt-get install -qqy nginx
 
