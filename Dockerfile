@@ -9,8 +9,8 @@
 FROM amos6224/namely.3
 
 # Install Nginx.
-RUN apt-get update -qq && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -qqy nginx
+RUN apt-get -qy update
+RUN apt-get -qy install nginx
 
 # Add our configuration files
 ADD nginx.conf /etc/nginx/nginx.conf
